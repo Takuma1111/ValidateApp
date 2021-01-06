@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+ root 'tasks#index'
+
+  get 'tasks/index'
   get 'sessions/new'
   get 'items/index'
 
