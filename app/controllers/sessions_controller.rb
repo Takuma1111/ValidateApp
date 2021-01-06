@@ -19,9 +19,12 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase) #downcaseは大文字を小文字に変換する
        if user && user.authenticate(params[:session][:password])
          log_in user
+         @error = ''
          redirect_to root_path
 
        else
+         puts 'ログインエラー'
+         @error = '入力した情報が誤っています。'
          render 'new'
     end
   end

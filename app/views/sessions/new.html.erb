@@ -6,3 +6,7 @@
   <%= f.password_field :password %>
   <%= f.submit "Log in" %>
 <% end %>
+
+<% if @error != '' %>
+  <h1 style= "color:red"><%= @error %></h1>
+<% end %>
