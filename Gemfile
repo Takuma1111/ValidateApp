@@ -39,6 +39,8 @@ gem 'bcrypt',  '3.1.12'
 gem 'therubyracer'
 gem 'libv8'
 
+gem 'frontend-generators'
+
 
 
 group :development, :test do
